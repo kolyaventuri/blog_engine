@@ -40,6 +40,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'pry'
   gem 'database_cleaner'
+  gem 'capybara'
 end
 
 group :development do
