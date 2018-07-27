@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'omniauth-google-oauth2'
+gem 'slim'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -42,6 +43,7 @@ group :development, :test do
   gem 'pry'
   gem 'database_cleaner'
   gem 'capybara'
+  gem 'figaro'
 end
 
 group :development do
