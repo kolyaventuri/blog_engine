@@ -21,3 +21,8 @@ nav.navbar.is-transparent
       - else
         .navbar-item.has-dropdown.is-hoverable
           a.navbar-link Welcome, #{current_user.name}
+          .navbar-dropdown.is-right.has-text-grey
+            a.navbar-item href=logout_path
+              span.icon.is-small
+                i.far.fa-sign-out
+              span &nbsp;Logout
