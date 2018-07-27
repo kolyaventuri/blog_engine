@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_27_162240) do
+ActiveRecord::Schema.define(version: 2018_07_27_164508) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2018_07_27_162240) do
   create_table "authors", force: :cascade do |t|
     t.string "name"
     t.bigint "comments_id"
+    t.text "uid"
     t.index ["comments_id"], name: "index_authors_on_comments_id"
   end
 
