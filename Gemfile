@@ -33,7 +33,10 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'bcrypt', '~> 3.1.7'
+
+gem 'omniauth-google-oauth2'
+gem 'slim'
+gem 'bulma-rails'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -41,6 +44,7 @@ group :development, :test do
   gem 'pry'
   gem 'database_cleaner'
   gem 'capybara'
+  gem 'figaro'
 end
 
 group :development do

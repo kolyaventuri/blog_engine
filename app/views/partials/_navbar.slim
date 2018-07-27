@@ -1,0 +1,28 @@
+nav.navbar.is-transparent
+  .navbar-brand
+    a.navbar-item href="/"
+      img alt=("Best Blogger") height="28" src="https://via.placeholder.com/112x28" width="112" /
+    .navbar-burger.burger data-target="navbarExampleTransparentExample"
+      span
+      span
+      span
+  #navbarExampleTransparentExample.navbar-menu
+    .navbar-start
+      a.navbar-item href="/"
+        | Home
+    .navbar-end
+      - unless current_user
+        .navbar-item
+          a.button.is-danger.is-inverted href=google_login_path
+            span.icon
+              i.fab.fa-google
+            span
+              | Sign in with Google
+      - else
+        .navbar-item.has-dropdown.is-hoverable
+          a.navbar-link Welcome, #{current_user.name}
+          .navbar-dropdown.is-right.has-text-grey
+            a.navbar-item href=logout_path
+              span.icon.is-small
+                i.far.fa-sign-out
+              span &nbsp;Logout
