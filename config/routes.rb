@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get '/auth/google_oauth2/callback', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy', as: 'logout'
 
-  resources :posts, only: [:index, :new, :create]
+  resources :posts, only: [:index, :new, :create, :show]
 end
